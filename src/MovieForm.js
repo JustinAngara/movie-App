@@ -10,14 +10,13 @@ export default class MovieForm extends React.Component{
             rating:1
         }
     }
-    
+
     onSubmit = (event) => {
         event.preventDefault()
         this.props.addMovie()
     }
     handleTypeChange = (event) => {
-        console.log(event);
-        
+        console.log(event); 
     }
     render(){
         return(
@@ -25,19 +24,19 @@ export default class MovieForm extends React.Component{
                 <form>
                     
                     Movie Name:
-                    <input type="text" value={this.state.typeValue}
+                    <input type="text" value={this.state.movieName}
                      onChange={this.handleTypeChange}></input><br/>
                     
                     Description:
-                    <input type="text" value={this.state.typeValue}
+                    <input type="text" value={this.state.description}
                      onChange={this.handleTypeChange}></input><br/>
                     
                     Author:
-                    <input type="text" value={this.state.typeValue}
+                    <input type="text" value={this.state.author}
                      onChange={this.handleTypeChange}></input><br/>
                     
                     Rating:
-                    <input type="number" min ="1" max="5" value={this.state.typeValue}
+                    <input type="number" min ="1" max="5" value={this.state.rating}
                      onChange={this.handleTypeChange}></input><br/>
                     
                     <button className="btn btn-primary" onClick={ this.onSubmit() }>Submit</button>
