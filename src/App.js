@@ -17,14 +17,16 @@ export default class App extends React.Component {
       ]
     }
   }
+  addMovie = (newMovie) =>{
+      
+  }
+
 
   render(){
     return(
       <div className="center">
       
         <MovieForm />
-   
-
 
       </div>
     );
